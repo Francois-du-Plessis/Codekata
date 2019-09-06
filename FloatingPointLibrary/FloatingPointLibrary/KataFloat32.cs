@@ -4,7 +4,16 @@ using System.Text;
 
 namespace FloatingPointLibrary
 {
-    class KataFloat32
+    public class KataFloat32
     {
-    }
+
+        internal int _sign;
+        internal  _exponent;
+        internal 
+
+        public KataFloat32 Parse(string number)
+        {
+            return 
+        }
+     }
 }

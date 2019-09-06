@@ -16,8 +16,8 @@ namespace FloatingPointLibrary.Unit.Test
 
             //Assert
             Assert.Equal(kataFloatResult._sign, 0);
-            Assert.Equal(kataFloatResult._exponent, 0b10000000);
-            Assert.Equal(kataFloatResult._mantissa, 0b10010010000111001010110);
+            Assert.Equal(kataFloatResult._exponent, 0b10000000u);
+            Assert.Equal(kataFloatResult._mantissa, 0b10010010000111001010110u);
         }
     }
 }
