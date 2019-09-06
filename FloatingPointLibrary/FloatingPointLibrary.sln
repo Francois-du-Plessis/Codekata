@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingPointLibrary", "FloatingPointLibrary\FloatingPointLibrary.csproj", "{E94E13D4-3F79-4978-835A-5EF847B15E32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingPointLibrary.Unit.Test", "FloatingPointLibrary.Unit.Test\FloatingPointLibrary.Unit.Test.csproj", "{D94F85E1-0A23-4DA0-B5E9-7F557C5123C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94E13D4-3F79-4978-835A-5EF847B15E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94E13D4-3F79-4978-835A-5EF847B15E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94E13D4-3F79-4978-835A-5EF847B15E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94E13D4-3F79-4978-835A-5EF847B15E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94F85E1-0A23-4DA0-B5E9-7F557C5123C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94F85E1-0A23-4DA0-B5E9-7F557C5123C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94F85E1-0A23-4DA0-B5E9-7F557C5123C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94F85E1-0A23-4DA0-B5E9-7F557C5123C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CA49557-307E-44AF-8A75-C3C79BE5F45B}
+	EndGlobalSection
+EndGlobal
