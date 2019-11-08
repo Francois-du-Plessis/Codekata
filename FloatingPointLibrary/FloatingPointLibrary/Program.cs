@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FloatingPointLibrary
 {
@@ -6,25 +7,8 @@ namespace FloatingPointLibrary
     {
         static void Main(string[] args)
         {
-            var kata = new KataFloat32();
-
-            float float1 = (float)(10 * Math.Exp(30));
-            float float2 = (float)(9 * Math.Exp(16));
-            float float3 = float1 + float2;
-
-            int a= 1;
-            int b= 10;
-            var c = a / b;
-
-            Console.WriteLine($"a | {a}");
-            Console.WriteLine($"b | {b}");
-            Console.WriteLine($"c | {c}");
-
-            Console.WriteLine($"float1 == float3 | {float1 == float1}");
-            Console.WriteLine($"float1 eqls float3 | {float1.Equals(float3)}");
-
-
-
+            GetIntergralBinary(0);
+            
             //Console.WriteLine($"{ZYX((object)kata)}");
 
             //int x = 1;
@@ -34,6 +18,26 @@ namespace FloatingPointLibrary
             //Console.WriteLine($"{x}");
             Console.ReadLine();
         }
+
+        private static void GetIntergralBinary(int intergral)
+        {
+            //for each number divide by  2 and figure out if answer is whole or fraction ===> make 0 or 1 and concat to char array
+            var result = intergral;  //1
+            var mod = 0;
+            var binary = new List<int>();
+
+            do
+            {
+                mod = result % 2;   // 1 or 0
+                result = result / 2;
+
+                Console.WriteLine("MOD ="+ mod);
+                Console.WriteLine("RESULT =" + result);
+
+            }
+            while (!(mod == 0 && result == 0));
+        }
+
 
         public static void XYZ(KataFloat32 x)
         {
