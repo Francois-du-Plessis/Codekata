@@ -19,6 +19,9 @@ namespace FloatingPointLibrary.Unit.Test
             Assert.Equal(0, kataFloatResult._sign);
             Assert.Equal(0b10000000u, kataFloatResult._exponent);
             Assert.Equal(0b10010010000111001010110u, kataFloatResult._mantissa);
+
+            // 100001.11101
+            // 1.1010100011 * 2^(x-128)
         }
 
         [Fact]

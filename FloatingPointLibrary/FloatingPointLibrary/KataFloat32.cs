@@ -25,7 +25,6 @@ namespace FloatingPointLibrary
         public static bool TryParse(string number, out KataFloat32 kataFloat)
         {
             kataFloat = new KataFloat32();
-            return false;
 
             // Find seperator
             var pattern = @"^(-{0,1})(\d+)\.{0,1}(\d*)$";
@@ -41,20 +40,31 @@ namespace FloatingPointLibrary
             //3/2 = 1.5     1         #     0.14 * 2 = 0.28     0     
             //1/2  = 0.5    1         #     0.28 * 2 = 0.56     0
             //0/2 = 0       0         #     0.56 * 2 = 1.12     1......
-            //                        # 
+            //                        #     0.12 * 2 = 0.24
             //11.001
+
+            // 0.14 * 2 = 0.28
+            // 0.28 * 2 = 0.56
+            // 0.56 * 2 = 1.12
+            // 0.12 * 2 = 0.24
+            // 0.24 * 2 = 0.48
+            // 0.48 * 2 = 0.96
+            // 0.96 * 2 = 1.84
+            // 0.84 * 2 = 1.68
 
             var intergralInput = match.Groups[1].Value;
             int.TryParse(intergralInput, out int intergral);
 
-           // var a = GetIntergralBinary(intergral);
+            var intergralBinaryList = GetIntergralBinary(intergral);
 
-            var fractional = match.Groups[2].Value;
+            var fractionalInput = match.Groups[2].Value;
+            int.TryParse(fractionalInput, out int fractional);
+            var faractionalBinaryList = GetFractionalBinary(fractional);
         }
 
 
 
-        private static void GetIntergralBinary(int intergral)
+        private static List<int> GetIntergralBinary(int intergral)
         {
             //for each number divide by  2 and figure out if answer is whole or fraction ===> make 0 or 1 and concat to char array
             var result = intergral;  //1
@@ -66,9 +76,19 @@ namespace FloatingPointLibrary
                 mod = result % 2;   // 1 or 0
                 result = result / 2;
 
-
+                binary.Add(mod);
             }
             while (!(mod == 0 && result == 0));
+
+            return binary;
+        }
+
+        private static List<int> GetFractionalBinary(int fractional)
+        {
+            // We need to figure out how to do this.
+            // Using integer value for fractional part might not be feasible as we need to atleast be able to represent 23 bits
+            // We cannot use floats here.
+            // Possible solution. Keep track of length of integer. If Ingeger length increases it is the same as it going accross the decimal
         }
 
 

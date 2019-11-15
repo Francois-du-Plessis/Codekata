@@ -7,7 +7,7 @@ namespace FloatingPointLibrary
     {
         static void Main(string[] args)
         {
-            GetIntergralBinary(0);
+            GetIntergralBinary(1999999999);
             
             //Console.WriteLine($"{ZYX((object)kata)}");
 
