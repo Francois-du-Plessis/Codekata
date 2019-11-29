@@ -43,6 +43,8 @@ namespace FloatingPointLibrary
             //                        #     0.12 * 2 = 0.24
             //11.001
 
+            //0.3535       0.3453453535123 * 2   
+
             // 0.14 * 2 = 0.28
             // 0.28 * 2 = 0.56
             // 0.56 * 2 = 1.12
@@ -58,6 +60,12 @@ namespace FloatingPointLibrary
             var intergralBinaryList = GetIntergralBinary(intergral);
 
             var fractionalInput = match.Groups[2].Value;
+            var orderDelter = GetOrderDelter();
+            if (fractionalInput.Length > 8) 
+            {
+                fractionalInput = fractionalInput.Substring(0, 8); //keep string less than 9 due to int32 constraints
+            }
+
             int.TryParse(fractionalInput, out int fractional);
             var faractionalBinaryList = GetFractionalBinary(fractional);
         }
@@ -85,13 +93,25 @@ namespace FloatingPointLibrary
 
         private static List<int> GetFractionalBinary(int fractional)
         {
+            var binary = new List<int>();
+            var result = fractional;
+            do
+            {
+
+
+
+            } while (binary.Count < 24);
             // We need to figure out how to do this.
             // Using integer value for fractional part might not be feasible as we need to atleast be able to represent 23 bits
             // We cannot use floats here.
             // Possible solution. Keep track of length of integer. If Ingeger length increases it is the same as it going accross the decimal
+
         }
 
-
+        private static int GetOrderDelter(string fractional)
+        {
+            //we need to count the number preceeding zeros and then every time we go over the mod 1 then we minus delta by 1 untill we get to zero
+        }
 
         //public KataFloat32 Parse(string number)
         //{

@@ -7,8 +7,8 @@ namespace FloatingPointLibrary
     {
         static void Main(string[] args)
         {
-            GetIntergralBinary(1999999999);
-            
+            //GetIntergralBinary(1999999999);
+
             //Console.WriteLine($"{ZYX((object)kata)}");
 
             //int x = 1;
@@ -16,6 +16,9 @@ namespace FloatingPointLibrary
 
 
             //Console.WriteLine($"{x}");
+            var stringy = "a";
+            var x = stringy.Substring(0, 8);
+            Console.WriteLine(x);
             Console.ReadLine();
         }
 
